@@ -1,31 +1,36 @@
-
-package org.usfirst.frc.team1124.robot.commands;
-
-import edu.wpi.first.wpilibj.command.Command;
+package org.usfirst.frc.team1124.robot.commands.auto;
 
 import org.usfirst.frc.team1124.robot.Robot;
 
-/**
- *
- */
-public class ExampleCommand extends Command {
+import edu.wpi.first.wpilibj.command.Command;
 
-    public ExampleCommand() {
-        // Use requires() here to declare subsystem dependencies
-        requires(Robot.exampleSubsystem);
+public class AutoDrive extends Command {
+	
+	private double speed_left;
+	private double speed_right;
+	
+    public AutoDrive(double speed_left, double speed_right, double duration) {
+        requires(Robot.drivetrain);
+        
+        this.speed_left = speed_left;
+        this.speed_right = speed_right;
+        
+        setTimeout(duration);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() {
+    	// reset encoders
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+    	Robot.drivetrain.drive_tank(speed_left, speed_right);
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() {
-        return false;
+        return isTimedOut();
     }
 
     // Called once after isFinished returns true
