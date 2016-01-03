@@ -11,7 +11,7 @@ import edu.wpi.first.wpilibj.command.Subsystem;
 
 public class DriveTrain extends Subsystem {
 	
-	private CANTalon front_left_motor, back_left_motor,  front_right_motor, back_right_motor;
+	public CANTalon front_left_motor, back_left_motor,  front_right_motor, back_right_motor;
 	private RobotDrive drive;
 	
 	public DriveTrain(){
