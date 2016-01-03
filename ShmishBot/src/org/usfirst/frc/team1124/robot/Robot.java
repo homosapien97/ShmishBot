@@ -31,6 +31,9 @@ public class Robot extends IterativeRobot {
 	
 	// autonomous
     Command autonomousCommand;
+    
+    // this revision of code (displayed on dashboard)
+    public static String codeRevision = "[v6.4.0]:lift-swap_bash-2015";
 
     /**
      * This function is run when the robot is first started up and should be
