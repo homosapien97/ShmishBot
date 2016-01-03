@@ -74,5 +74,19 @@ public class DashboardConnection {
 		}else{
 			Robot.compressor.stop();
 		}
+		
+		// motor data
+		
+		//data that can be gathered (that does not relate to PID and connected encoder function)
+		/*
+		Robot.drivetrain.front_left_motor.getBrakeEnableDuringNeutral();
+		Robot.drivetrain.front_left_motor.getTemp();
+		Robot.drivetrain.front_left_motor.getOutputCurrent();
+		Robot.drivetrain.front_left_motor.getOutputVoltage();
+		Robot.drivetrain.front_left_motor.getBusVoltage();
+		Robot.drivetrain.front_left_motor.getFaultOverTemp();
+		Robot.drivetrain.front_left_motor.getFaultUnderVoltage();
+		Robot.drivetrain.front_left_motor.getFaultHardwareFailure();
+		*/
 	}
 }
